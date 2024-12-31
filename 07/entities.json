@@ -1,0 +1,24 @@
+[
+    {
+        "uid": {
+            "type": "Photo",
+            "id": "VacationPhoto94.jpg"
+        },
+        "attrs": {
+            "dept": "cosmic",
+            "owner": "alice"
+        },
+        "parents": []
+    },
+    {
+        "uid": {
+            "type": "User",
+            "id": "alice"
+        },
+        "attrs": {
+            "id": "alice",
+            "dept": "chaos"
+        },
+        "parents": []
+    }
+]
