@@ -14,9 +14,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Cache ceder-policy-cli
+        id: cache-cedar
+        uses: actions/cache@v4
+        with:
+          key: cedar-policy-cli
+          path: ~/.cargo/bin/cedar
+
       - name: Install cedar-policy-cli
+        if: steps.cache-cedar.outputs.cache-hit != 'true'
         run: cargo install cedar-policy-cli
-    
+
+      - name: Set PATH
+        run: export PATH=$HOME/.cargo/bin:$PATH
+
       - name: Run tests
         working-directory: sample-01
         run: bash 01.sh
