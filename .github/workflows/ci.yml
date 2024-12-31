@@ -29,5 +29,4 @@ jobs:
         run: export PATH=$HOME/.cargo/bin:$PATH
 
       - name: Run tests
-        working-directory: sample-01
-        run: bash 01.sh
+        run: sh test.sh
