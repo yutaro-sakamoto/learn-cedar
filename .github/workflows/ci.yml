@@ -1,0 +1,22 @@
+name: Run tests
+on:
+  push:
+  pull_request:
+    types: [opened, reopened, review_requested, synchronize]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install cedar-policy-cli
+        run: cargo install cedar-policy-cli
+    
+      - name: Run tests
+        working-directory: sample-01
+        run: bash 01.sh
