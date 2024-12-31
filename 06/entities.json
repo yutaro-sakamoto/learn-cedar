@@ -1,0 +1,22 @@
+[
+    {
+        "uid": {
+            "type": "Photo",
+            "id": "VacationPhoto94.jpg"
+        },
+        "attrs": {
+            "accessLevel": "public"
+        },
+        "parents": []
+    },
+    {
+        "uid": {
+            "type": "User",
+            "id": "alice"
+        },
+        "attrs": {
+            "location": "USA"
+        },
+        "parents": []
+    }
+]
