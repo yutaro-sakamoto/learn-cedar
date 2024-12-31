@@ -1,0 +1,5 @@
+{
+    "mfa_authenticated": true,
+    "request_client_ip": "222.222.222.222",
+    "oidc_scope": "profile"
+}
